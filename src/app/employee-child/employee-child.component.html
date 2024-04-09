@@ -1,0 +1,12 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <div>
+         <p> {{index+1}}. {{employee.name}} {{employee.surname}} - {{employee.position}} - {{employee.salary}}</p>
+      </div>
+
+      <app-caracteristics-employee (caracteristics)="addCaracteristic($event)"></app-caracteristics-employee>
+
+      <ul class="list-group" *ngFor="let caracteristic of caracteristics; let i = index">{{i+1}}. {{caracteristic}}</ul>
+    </div>
+  </div>
